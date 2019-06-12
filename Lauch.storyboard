@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sav-qp-peo">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="Zeb-Je-HCj">
+            <objects>
+                <viewController id="Sav-qp-peo" customClass="LaunchScreenViewController" customModule="SafetyFirst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OKK-Da-Kdf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2d-eI-e1E">
+                                <rect key="frame" x="20" y="20" width="335" height="772"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safety-First" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-95-uX6">
+                                        <rect key="frame" x="67.666666666666686" y="261" width="200" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="ICu-cP-Bol"/>
+                                            <constraint firstAttribute="width" constant="200" id="neK-ql-6SV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9iI-6F-Lec">
+                                        <rect key="frame" x="157.66666666666666" y="326" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait while downloading forbiddens passwords List" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dt2-yp-FeC">
+                                        <rect key="frame" x="0.0" y="511.00000000000006" width="335" height="40.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dt2-yp-FeC" firstAttribute="top" secondItem="TsG-95-uX6" secondAttribute="bottom" id="59D-WN-k3e"/>
+                                    <constraint firstItem="TsG-95-uX6" firstAttribute="centerX" secondItem="n2d-eI-e1E" secondAttribute="centerX" id="59x-fY-qlg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dt2-yp-FeC" secondAttribute="trailing" id="75e-g5-0bv"/>
+                                    <constraint firstItem="9iI-6F-Lec" firstAttribute="centerX" secondItem="n2d-eI-e1E" secondAttribute="centerX" id="OR0-V7-8GL"/>
+                                    <constraint firstItem="TsG-95-uX6" firstAttribute="centerY" secondItem="n2d-eI-e1E" secondAttribute="centerY" id="YzX-5f-f69"/>
+                                    <constraint firstItem="Dt2-yp-FeC" firstAttribute="leading" secondItem="n2d-eI-e1E" secondAttribute="leading" id="mgV-1O-stY"/>
+                                    <constraint firstItem="TsG-95-uX6" firstAttribute="top" secondItem="9iI-6F-Lec" secondAttribute="bottom" constant="-85" id="mtI-wu-pND"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32215464799999999" green="0.3982289349" blue="0.4841725221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n2d-eI-e1E" firstAttribute="leading" secondItem="OKK-Da-Kdf" secondAttribute="leading" constant="20" id="Rwd-nI-Rz1"/>
+                            <constraint firstAttribute="bottom" secondItem="n2d-eI-e1E" secondAttribute="bottom" constant="20" id="izQ-N3-fZm"/>
+                            <constraint firstItem="n2d-eI-e1E" firstAttribute="top" secondItem="OKK-Da-Kdf" secondAttribute="top" constant="20" id="ptV-0X-1yd"/>
+                            <constraint firstAttribute="trailing" secondItem="n2d-eI-e1E" secondAttribute="trailing" constant="20" id="xKd-WS-YGq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="keJ-dE-Pg4"/>
+                    </view>
+                    <connections>
+                        <outlet property="ui_activityIndicator" destination="9iI-6F-Lec" id="be2-S3-NhQ"/>
+                        <outlet property="ui_welcomeMessageLabel" destination="Dt2-yp-FeC" id="UiE-Hg-0QW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2h-GE-tSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Safety-First" width="569" height="640"/>
+    </resources>
+</document>
